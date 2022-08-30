@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greeting</title>
+</head>
+<body>
+  <h1>안녕하세요. 저는 {{name}}이며 {{age}}살입니다.</h1>
+  <p>제 이름의 길이는 {{name|length}}글자 입니다</p>
+  <p>제가 첫번째 좋아하는 음식은 {{food|first}}입니다</p>
+  {% comment %} <p>제가 좋아하는 음식은 {{food|join:"&"}}입니다</p> {% endcomment %}
+  {% for f in food %}
+    {% if f|length > 5 %}
+      <p>{{f}}</p>
+    {% endif %}
+  {% endfor %}
+  <p>이것은 주석처리가 되지않았습니다</p>
+  {#<p>이것은 주석처리가 되었습니다</p>#}
+  {% comment %} <p>이것은 주석처리가 되었습니다</p> {% endcomment %}
+</body>
+</html>
+

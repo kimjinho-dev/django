@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block c %}
+  <h1>Throw</h1>
+  <form action="/catch/" method="GET">
+    <label for="num">번호</label>
+    <input type="text" id="num" name="num"><br><br>
+    <label for="meg">메세지</label>
+    <input type="text" id="meg" name="meg"><br><br>
+    <label for="time">작성시간</label>
+    <input type="text" id="time" name="time">
+    <input type="submit">
+  </form>
+{% endblock c %}
+
