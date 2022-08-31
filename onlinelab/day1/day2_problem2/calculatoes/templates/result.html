@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reslut</title>
+</head>
+<body>
+    <h1>계산결과</h1>
+    <p>{{first}} + {{second}} = {{first|add:second}}</p>
+    <p>{{first}} - {{second}} = {{minus}}</p>
+    <p>{{first}} * {{second}} = {{multiply}}</p>
+    {% if divide == 0 %}
+        <p>계산할 수 없습니다</p>
+    {% else %}
+        <p>{{first}} / {{second}} = {{divide}}</p>
+    {% endif %}
+</body>
+</html>
