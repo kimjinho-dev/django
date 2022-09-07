@@ -1,0 +1,49 @@
+<!-- 데일리 과제 3-2. CSS Flexbox 디버깅 실습 예제 Lv2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .outer-box {
+        border: 1px dotted black;
+        height: 200px;
+        width: 600px;
+      }
+
+      /* 1. 문제 원인 : flex는 자식 요소(바로 아래의 요소)만 정렬합니다.
+    즉, outer_box는 inner_box만을 자식으로 가지고 있고, box는 inner_box의 자식입니다. 
+    따라서 outer_box의 자손인 inner_box에는 flex, space-between이 적용되지 않습니다. */
+
+      /* 2. 해결 방법 : inner_box를 flexbox로 설정하고 space-between 속성을 부여합니다. */
+
+      .inner-box {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid red;
+        height: 200px;
+        width: 300px;
+      }
+
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="outer-box">
+      <div class="inner-box">
+        <div class="box">item1</div>
+        <div class="box">item2</div>
+      </div>
+    </div>
+  </body>
+
+</html>

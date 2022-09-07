@@ -1,0 +1,10 @@
+# 입력 (내장함수 input은 기본적으로 문자열, 한 줄로 받음)
+word1 = input()
+word2 = input("단어를 입력하세요: ")
+number1 = int(input())
+number2 = float(input())
+
+print(word1)
+print(word2)
+print(number1)
+print(number2)

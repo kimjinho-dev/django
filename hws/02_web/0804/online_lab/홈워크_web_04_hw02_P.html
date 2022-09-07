@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <style>
+    /* 이곳에 코드를 작성합니다.*/
+    .container {
+      display: flex;
+      /* flex속성 사용 */
+      flex-direction: column-reverse;
+      /* 열 방향으로, 거꾸로 배열 . 따라서 justfy는 열, align은 행이됨*/
+      align-items: center;
+      /* 따라서 가로 정렬을 위해서는 align-items 사용 */
+    }
+
+    .item {
+      border-style: solid;
+      display: inline-block;
+      /* span은 인라인으로 width를 주어도 변경이 없다.따라서 inline-block으로 바꿔준다*/
+      width: 50px;
+      height: 50px;
+      margin: 10px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <span class="item">1</span>
+    <span class="item">2</span>
+    <span class="item">3</span>
+    <span class="item">4</span>
+  </div>
+</body>
+
+</html>
