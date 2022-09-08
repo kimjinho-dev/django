@@ -2,24 +2,24 @@
 
 ## 1. Read
 
-<img src="./01_Read.png" width="300" height="300"/>
+<img src="01_Read.png" width="300" height="300"/>
 
 ## 2. Create
 
-<img src="./02_Create.png" width="300" height="300"/>
+<img src="02_Create.png" width="300" height="300"/>
 
 ## 3. Detail
 
-<img src="./03_Detail.png" width="300" height="300"/>
+<img src="03_Detail.png" width="300" height="300"/>
 
 ## 4. Update
 
-<img src="./04_Update.png" width="300" height="300"/>
+<img src="04_Update.png" width="300" height="300"/>
 
 ## 5. delete
 
-<img src="./05_delete_01.png" width="300" height="300"/>
-<img src="./05_delete_02.png" width="300" height="300"/>
+<img src="05_delete_01.png" width="300" height="300"/>
+<img src="05_delete_02.png" width="300" height="300"/>
 
 <hr>
 
