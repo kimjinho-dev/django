@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>DETAIL</h1>
+<a href="votes:index">BACK</a>
+<hr>
+
+<h2>{{ vote.question }}</h2>
+<p>왼쪽 : {{ vote.left_player }} / 오른쪽 : {{ vote.right_player }}</p>
+<div class="progress hight:200px">
+  <div class="progress-bar bg-primary progress-bar-striped active" role="progressbar" style="width:{{left}}%">
+    <p>{{left}}%</p>
+  </div>
+  <div class="progress-bar bg-danger progress-bar-striped active" role="progressbar" style="width:{{right}}%">
+    <p>{{right}}%</p>
+  </div>
+</div>
+<hr>
+
+<h2>댓글 작성</h2>
+<form action="{% url 'votes:comment_add' vote.pk %}" method="POST">
+  {% csrf_token %}
+  {{ comments_form }}
+  <input type="submit" value="댓글작성">
+</form>
+<hr>
+
+<h2>댓글 목록</h2>
+{% for comment in comments %}
+  <p>{{comment.content}}</p>
+  <br>
+{% endfor %}
+
+{% endblock  %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> 밸런스 게임 </h1>
+<a href="{% url 'votes:create' %}">새로운 밸런스게임</a>
+<hr>
+{% for vote in votes %}
+  {{ vote.question }}
+  <form action="{% url 'votes:detail' vote.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Play">
+  </form>
+{% endfor %}
+{% endblock  %}
